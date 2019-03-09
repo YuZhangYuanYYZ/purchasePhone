@@ -16,15 +16,15 @@ function caculateTax(totalPrice){
 
 function totalSpending(){      
     var n =0;
-    while (bankrupt()){
+    while (isBankrupt(thresholdSpending, totalSpendingMoney, bankMoney )){
     n = n+1;
     moneyOfAcc = n*accesorieyPrice;
     moneyOfphone = n*phonePrice;
     total = moneyOfphone+moneyOfAcc;
     totalSpendingMoney = total+caculateTax(total);   
 }
-   function bankrupt(){
-          return ((thresholdSpending-totalSpendingMoney)>0)&&((bankMoney-totalSpendingMoney)>0);
+   function isBankrupt(thresholdSpending, totalSpendingMoney, bankMoney ){  
+   return ((thresholdSpending-totalSpendingMoney)>0)&&((bankMoney-totalSpendingMoney)>0);
    }
     phoneNumber = n;
 }
