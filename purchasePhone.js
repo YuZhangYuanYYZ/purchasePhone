@@ -16,18 +16,19 @@ function caculateTax(totalPrice){
 
 function totalSpending(){      
     var n =0;
-    while (((thresholdSpending-totalSpendingMoney)>0)&&((bankMoney-totalSpendingMoney)>0)){
+    while (bankrupt()){
     n = n+1;
-   totalSpendingMoney = 0;
     moneyOfAcc = n*accesorieyPrice;
     moneyOfphone = n*phonePrice;
     total = moneyOfphone+moneyOfAcc;
     totalSpendingMoney = total+caculateTax(total);   
 }
-   
-    return n;
+   function bankrupt(){
+          return ((thresholdSpending-totalSpendingMoney)>0)&&((bankMoney-totalSpendingMoney)>0);
+   }
+    phoneNumber = n;
 }
-phoneNumber = totalSpending();
+totalSpending();
 console.log("the number of phone you have bought is:"+phoneNumber+" the money you have spent(with tax) is:$"+totalSpendingMoney);
 
 
