@@ -1,34 +1,33 @@
-var phonePrice = 100;
-var accesorieyPrice = 10;
-var bankMoney = 5000;
-var thresholdSpending = 4000;
-var taxRate    = 0.1;
-var totalSpendingMoney=0;
-var phoneNumber;
-var total;
-var moneyOfAcc;
-var moneyOfphone;
+    function caculateTax(taxRate,total){
+        return total*taxRate ;
+    }
 
-function caculateTax(totalPrice){
-    var tax = totalPrice*taxRate;
-    return tax;
-}
+    function totalSpending(phonePrice,accesorieyPrice,taxRate,phoneAmount,totalSpendingMoney){  
+        var moneyOfAcc = phoneAmount*accesorieyPrice;
+        var moneyOfphone = phoneAmount*phonePrice;
+        var total = moneyOfphone+moneyOfAcc;
+        totalSpendingMoney = total+caculateTax(taxRate,total);   
+        return totalSpendingMoney;
+    }
 
-function totalSpending(){      
-    var n =0;
-    while (isBankrupt(thresholdSpending, totalSpendingMoney, bankMoney )){
-    n = n+1;
-    moneyOfAcc = n*accesorieyPrice;
-    moneyOfphone = n*phonePrice;
-    total = moneyOfphone+moneyOfAcc;
-    totalSpendingMoney = total+caculateTax(total);   
-}
-   function isBankrupt(thresholdSpending, totalSpendingMoney, bankMoney ){  
-   return ((thresholdSpending-totalSpendingMoney)>0)&&((bankMoney-totalSpendingMoney)>0);
-   }
-    phoneNumber = n;
-}
-totalSpending();
-console.log("the number of phone you have bought is:"+phoneNumber+" the money you have spent(with tax) is:$"+totalSpendingMoney);
+    function isBankrupt(phonePrice,accesorieyPrice,taxRate,phoneAmount,thresholdSpending, bankMoney,totalSpendingMoney ){  
+    return (((thresholdSpending-totalSpending(phonePrice,accesorieyPrice,taxRate,phoneAmount,totalSpendingMoney))>0)&&((bankMoney-totalSpending(phonePrice,accesorieyPrice,taxRate,phoneAmount,totalSpendingMoney))>0));
+    }
 
+    function main(){
+        var thresholdSpending =4000;
+        var bankMoney = 5000;
+        var accesorieyPrice = 10;
+        var phonePrice = 100;
+        var taxRate = 0.1;
+        var phoneAmount = 0;   
+        var totalSpendingMoney = 0; 
+        while (isBankrupt(phonePrice,accesorieyPrice,taxRate,phoneAmount,thresholdSpending,bankMoney,totalSpendingMoney )){
+            phoneAmount = phoneAmount+ 1; 
+        }
+            totalSpendingMoney = totalSpending(phonePrice,accesorieyPrice,taxRate,phoneAmount,totalSpendingMoney)
+            console.log("the number of phone you have bought is:"+phoneAmount+","+ "the money you have spent(with tax) is:$"+totalSpendingMoney);
+    }
+    
+    main();
 
