@@ -20,12 +20,17 @@
         while (isBankrupt(thresholdSpending,bankMoney,allSpendingMoney)){
             phoneAmount = phoneAmount+1; 
             allSpendingMoney = spendingMoney(phonePrice,accesorieyPrice,phoneAmount,taxRate);
-            console.log("the phone number is:" +phoneAmount + "   total spending is :" +allSpendingMoney);
         }
         return {
         phoneAmount:phoneAmount,
         allSpendingMoney: spendingMoney(phonePrice,accesorieyPrice,phoneAmount-1,taxRate),
-    };
+              };
+    }
+    function formateOutput(phoneAmount,allSpendingMoney){
+            return {
+                buyPhones:"the number of phone you have bought is:"+(phoneAmount)+",",
+                spendMoney:"the money you have spent(with tax) is:$"+allSpendingMoney,
+            }
     }
     function main(){
        
@@ -33,7 +38,7 @@
         var bankMoney = 5000; 
         var phoneAmount = buyPhones(thresholdSpending,bankMoney).phoneAmount-1;
         var allSpendingMoney = buyPhones(thresholdSpending,bankMoney).allSpendingMoney;
-        console.log("the number of phone you have bought is:"+(phoneAmount)+","+ "the money you have spent(with tax) is:$"+allSpendingMoney);
+        console.log(formateOutput(phoneAmount,allSpendingMoney).buyPhones+ formateOutput(phoneAmount,allSpendingMoney).spendMoney);
     }
     
     main();
