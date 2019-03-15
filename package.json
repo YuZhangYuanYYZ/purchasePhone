@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "calculate how much phone can buy according to the bank account ![Image text](https://github.com/YuZhangYuanYYZ/purchasePhone/blob/purchurseBranch1/img-folder/purchasePhoneRequirements.png)",
+  "main": "purchasePhone.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuZhangYuanYYZ/purchasePhone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuZhangYuanYYZ/purchasePhone/issues"
+  },
+  "homepage": "https://github.com/YuZhangYuanYYZ/purchasePhone#readme",
+  "dependencies": {
+    "jasmine": "^3.3.1"
+  }
+}
