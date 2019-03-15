@@ -4,7 +4,7 @@
   "description": "calculate how much phone can buy according to the bank account ![Image text](https://github.com/YuZhangYuanYYZ/purchasePhone/blob/purchurseBranch1/img-folder/purchasePhoneRequirements.png)",
   "main": "purchasePhone.js",
   "scripts": {
-    "test": ""
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/YuZhangYuanYYZ/purchasePhone#readme",
   "dependencies": {
     "jasmine": "^3.3.1"
+  },
+  "devDependencies": {
+    "jasmine-spec-reporter": "^4.2.1"
   }
 }
