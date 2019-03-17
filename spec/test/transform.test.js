@@ -4,6 +4,13 @@ describe('Transform', () => {
     it('example', () => {
         expect(1).toBe(1);
     })
+    it('should return 2 when 1 plus 1', () => {
+        expect(1+1).toBe(2);
+    })
+    it('should return 3 when a Array has 3 elements', () => {
+        expect([1,3,5].length).toBe(3);
+    })
+
     it('should return correct data format', () => {
         const originalData = [
             { 
