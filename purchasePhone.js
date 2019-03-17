@@ -35,7 +35,6 @@
     }
 
     function main() {
-
         var thresholdSpending = 4000;
         var bankMoney = 5000;
         var result =  buyPhones(thresholdSpending, bankMoney);
@@ -43,5 +42,4 @@
         var allSpendingMoney = result.allSpendingMoney;
         console.log(formateOutput(phoneAmount, allSpendingMoney).buyPhones + formateOutput(phoneAmount, allSpendingMoney).spendMoney);
     }
-
-    main();
+    main();  ///pratice branch3
