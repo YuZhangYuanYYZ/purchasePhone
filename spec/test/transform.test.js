@@ -10,7 +10,6 @@ describe('Transform', () => {
     it('should return 3 when a Array has 3 elements', () => {
         expect([1,3,5].length).toBe(3);
     })
-
     it('should return correct data format', () => {
         const originalData = [
             { 
