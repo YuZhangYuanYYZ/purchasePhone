@@ -1,0 +1,12 @@
+{
+  "spec_dir": "spec",
+  "spec_files": [
+    "**/*[tT]est.js"
+  ],
+  "helpers": [
+    "helpers/reporter.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": true,
+  "showColors": false
+}
