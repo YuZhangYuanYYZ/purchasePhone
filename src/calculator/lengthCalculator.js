@@ -1,15 +1,17 @@
 const Unit = require('./Unit');
 
 const lengthCalculator = {
-    add: function(){
+    add: function(len1, len2){
+        this.isEqual(len1, len2)
         //TODO
     },
 
-    subtract: function(){
+    subtract: function(len1, len2){
+        this.isEqual(len1, len2)
         //TODO
     },
 
-    isEqual: function(){
+    isEqual: function(len1, len2){
          //TODO
     },
 }
