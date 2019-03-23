@@ -44,7 +44,7 @@ describe('Length', () => {
         const length1 = new Length(1000, Unit.MM);
         const length2 = new Length(10, Unit.M);
         const result = length1.subtract(length2);
-        expect(result.getLen()).toEqual(-900)
+        expect(result.getLen()).toEqual(-9000)
         expect(result.getUnit()).toEqual(Unit.MM)
     });
 });
