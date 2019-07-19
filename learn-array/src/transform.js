@@ -1,13 +1,12 @@
 function transform(data) {
-    var resultData = new Array;
     var resultData = data.map(function (data) {
-        data.name = data.name.toUpperCase();
-        data.totalPoints = data.cards.reduce(function (accumulator, currentValue) {
-            debugger;
+        return {
+        name: data.name.toUpperCase(),
+        totalPoints:data.cards.reduce(function (accumulator, currentValue) {
             return accumulator + currentValue.point;
-        }, 0);
-        data.cards = data.cards;
-        return data;
+        }, 0),
+        cards:data.cards
+        }
     });
     return resultData;
 }
