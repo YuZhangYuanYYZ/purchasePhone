@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/YuZhangYuanYYZ/purchasePhone#readme",
   "dependencies": {
-    "jasmine": "^3.3.1"
+    "jasmine": "^3.6.1"
   },
   "devDependencies": {
     "jasmine-spec-reporter": "^4.2.1"
